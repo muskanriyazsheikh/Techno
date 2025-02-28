@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 #editor {
   display: flex;
   flex-direction: column;
@@ -28,7 +29,8 @@ label {
   padding-top: 10px;
   padding-right: 200px;
   padding-left: 150px;
-  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
 }
 
 #htmlCode,
@@ -42,28 +44,34 @@ label {
   padding: 10px;
   border: none;
   resize: none;
-  font-family: "Courier New",
-      monospace;
+  font-family: "Courier New", monospace;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 button {
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-color: #007acc;
   color: #fff;
   border: none;
   cursor: pointer;
   margin-right: 10px;
   align-items: center;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 #downloadButton {
   text-decoration: none;
   background-color: #007acc;
   color: #fff;
-  padding: 5px 10px;
+  padding: 10px 20px;
   margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
 }
 
 iframe {
@@ -96,17 +104,22 @@ iframe {
   padding: 10px;
   overflow-y: auto; 
   max-height: 300px; 
-  padding-right: 100px;
 }
 
 /* Styles for dropdown */
 select {
-  width: 100%;
+  width: 30%; /* Adjust the width as needed */
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: "Courier New", monospace;
+}
+
+#logo {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  margin-left: 10px;
 }
 
 /* Hide sections by default */
@@ -116,15 +129,30 @@ select {
   display: none;
 }
 
+/* Center the menu buttons */
+#menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 /* Styles for registration page */
+body.register {
+  background: linear-gradient(rgba(21, 29, 147, 0.5), rgba(35, 213, 44, 0.475));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
 #register {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background : linergradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  border-radius: 15px;
+  background-color: #fff;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #register h2 {
@@ -135,11 +163,22 @@ select {
 #registerForm {
   display: flex;
   flex-direction: column;
-  color: black;
 }
 
 #registerForm label {
   margin-bottom: 5px;
+}
+
+.user {
+  display: flex;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.password {
+  display: flex;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #registerForm input {
@@ -147,12 +186,6 @@ select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-.password{
-  color: black;
-}
-.user{
-  color: black;
 }
 
 #registerForm button {

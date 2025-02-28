@@ -1,13 +1,16 @@
 /* Style.css */
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Poppins", sans-serif;
   margin: 100;
   padding: 100;
-  background-color: #100707d6;
+  /* background-color: #100707d6; */
   border-radius: 1.5%;
   border-color: black;
+  background-image: url('bk.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 #editor {
   display: flex;
   flex-direction: column;
@@ -17,11 +20,15 @@ body {
 
 label {
   font-weight: bold;
-  color: #007acc;
+  color: #d3dce1;
 }
 
 .code-section {
   margin-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 200px;
+  padding-left: 150px;
+  margin-bottom: 200px;
 }
 
 #htmlCode,
@@ -48,6 +55,7 @@ button {
   border: none;
   cursor: pointer;
   margin-right: 10px;
+  align-items: center;
 }
 
 #downloadButton {
@@ -80,6 +88,7 @@ iframe {
       width: 100%;
   }
 }
+
 /* Style for scrollable output box */
 #output {
   background-color: #f0f0f0;
@@ -87,4 +96,70 @@ iframe {
   padding: 10px;
   overflow-y: auto; 
   max-height: 300px; 
+  padding-right: 100px;
+}
+
+/* Styles for dropdown */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+}
+
+/* Hide sections by default */
+#htmlSection,
+#cssSection,
+#jsSection {
+  display: none;
+}
+
+/* Styles for registration page */
+#register {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background : linergradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+#register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+#registerForm label {
+  margin-bottom: 5px;
+}
+
+#registerForm input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.password{
+  color: black;
+}
+.user{
+  color: black;
+}
+
+#registerForm button {
+  padding: 10px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
